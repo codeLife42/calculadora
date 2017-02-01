@@ -1,0 +1,23 @@
+body{
+	background: gray;
+	font-family: "Nunito";
+}
+h1{
+	text-align: center;
+}
+.container{
+	background: white;
+	margin: 0 auto;
+	width: 360px;
+	height: 500px;
+}
+.display{
+	text-align: center;
+}
+#displayCalculadora{
+	width: 90%;
+	height: 30px;
+}
+.botoes{
+	text-align: center;
+}
