@@ -1,18 +1,38 @@
 body{
-	background: gray;
+	background: #000428; /* fallback for old browsers */
+	background: -webkit-linear-gradient(to left, #000428 , #004e92); /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to left, #000428 , #004e92); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 	font-family: "Nunito";
+	color: #003366;
 }
 h1{
+	padding-top: 5%;
 	text-align: center;
+	text-transform: uppercase;
+}
+p{
+	margin: 5% auto;
+	border: 1px solid #003366;
+	width: 60px;
+	height: 60px;
+	text-align: center;
+	font-size: 30px;
+	padding-bottom: 5px;
+}
+button{
+	background: #eeeeee;
+	font-size: 30px;
+	color: #003366;
+	border: none;
+	width: 30%;
+	height: 50px;
+	margin: 3.5px;
 }
 .container{
-	background: white;
+	background: #f7f7f7;
 	margin: 0 auto;
 	width: 360px;
 	height: 500px;
-}
-.display{
-	text-align: center;
 }
 #displayCalculadora{
 	width: 90%;
@@ -20,4 +40,8 @@ h1{
 }
 .botoes{
 	text-align: center;
+}
+.botaoReseta{
+	text-align: right;
+	margin-right: 3.5px;
 }

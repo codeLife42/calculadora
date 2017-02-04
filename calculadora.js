@@ -8,18 +8,23 @@ var btnReseta = document.querySelector("#btnReseta");
 //Numeros
 for(var i = 0;i < btnNumeros.length;i++){
 	btnNumeros[i].addEventListener("click",function(){
-		displayCalculadora.value += this.value;
+		displayCalculadora.textContent += this.value;
 	});
 }
 //Principais operacoes
 for(var i = 0;i < btnOperacoes.length;i++){
 	btnOperacoes[i].addEventListener("click",function(){
-		displayCalculadora.value += this.value;
+		displayCalculadora.textContent += this.value;
 	});
 }
 btnIgualdade.addEventListener("click",function(){
- 	displayCalculadora.value = eval(displayCalculadora.value);
+ 	displayCalculadora.textContent = eval(displayCalculadora.textContent);
 });
 btnReseta.addEventListener("click",function(){
-	displayCalculadora.value = "";
+	displayCalculadora.textContent = "";
 })
+btnOperacoes[0].addEventListener("keypress",event,function(){
+	if(event === 13){
+		console.log("Voce pressionou enter");
+	}
+});
