@@ -18,13 +18,46 @@ for(var i = 0;i < btnOperacoes.length;i++){
 	});
 }
 btnIgualdade.addEventListener("click",function(){
- 	displayCalculadora.textContent = eval(displayCalculadora.textContent);
+ 	igualdade();
 });
 btnReseta.addEventListener("click",function(){
 	displayCalculadora.textContent = "";
-})
-btnOperacoes[0].addEventListener("keypress",event,function(){
-	if(event === 13){
-		console.log("Voce pressionou enter");
+});
+//No momento unica maneira que consegui resolver, codigo redundante.
+window.addEventListener("keypress",function(e){
+	if(e.keyCode === 48){
+		displayCalculadora.textContent += "0";
+	}else if(e.keyCode === 49){
+		displayCalculadora.textContent += "1";
+	}else if(e.keyCode === 50){
+		displayCalculadora.textContent += "2";
+	}else if(e.keyCode === 51){
+		displayCalculadora.textContent += "3";
+	}else if(e.keyCode === 52){
+		displayCalculadora.textContent += "4";
+	}else if(e.keyCode === 53){
+		displayCalculadora.textContent += "5";
+	}else if(e.keyCode === 54){
+		displayCalculadora.textContent += "6";
+	}else if(e.keyCode === 55){
+		displayCalculadora.textContent += "7";
+	}else if(e.keyCode === 56){
+		displayCalculadora.textContent += "8";
+	}else if(e.keyCode === 57){
+		displayCalculadora.textContent += "9";
+	}else if(e.keyCode === 42){
+		displayCalculadora.textContent += " * ";
+	}else if(e.keyCode === 43){
+		displayCalculadora.textContent += " + ";
+	}else if(e.keyCode === 45){
+		displayCalculadora.textContent += " - ";
+	}else if(e.keyCode === 46){
+		displayCalculadora.textContent += ".";
+	}else if(e.keyCode === 13){
+		igualdade();
 	}
 });
+//Funcoes
+function igualdade(){
+	displayCalculadora.textContent = eval(displayCalculadora.textContent);
+}
